@@ -18,7 +18,7 @@ namespace WindowsFormsAppEasyCs83
         {
             InitializeComponent();
             this.Text = "Math Random";
-            this.Paint += new PaintEventHandler();
+            this.Paint += new PaintEventHandler(FormPaint);
 
             ls = new List<Ball>();
             Random random = new Random();
@@ -39,7 +39,7 @@ namespace WindowsFormsAppEasyCs83
                 ball.Point = p;
                 ball.Color = c;
 
-                ls.All(ball);
+                ls.Add(ball);
             }
         }
 
